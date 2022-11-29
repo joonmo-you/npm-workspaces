@@ -7,7 +7,15 @@
     "dev": "concurrently \"npm:dev:utils\" \"npm:dev:blog\" \"npm:dev:dashboard\"",
     "dev:blog": "npm run --workspace=@monorepo/blog dev",
     "dev:dashboard": "npm run --workspace=@monorepo/dashboard dev",
-    "dev:utils": "npm run --workspace=@monorepo/utils dev"
+    "dev:utils": "npm run --workspace=@monorepo/utils dev",
+    "test": "concurrently \"npm:test:*\" --kill-others-on-fail",
+    "test:blog": "npm run --workspace=@monorepo/blog test",
+    "test:dashboard": "npm run --workspace=@monorepo/dashboard test",
+    "test:utils": "npm run --workspace=@monorepo/utils test",
+    "typecheck": "concurrently \"npm:typecheck:*\" --kill-others-on-fail",
+    "typecheck:blog": "npm run --workspace=@monorepo/blog typecheck",
+    "typecheck:dashboard": "npm run --workspace=@monorepo/dashboard typecheck",
+    "typecheck:utils": "npm run --workspace=@monorepo/utils ttypecheckest"
   },
   "keywords": [],
   "author": "",

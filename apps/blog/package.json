@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "typecheck": "tsc src/index.ts --noEmit"
   },
   "dependencies": {
     "@monorepo/utils": "^1.0.0",
+    "@types/jest": "^29.2.3",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
@@ -17,7 +20,10 @@
     "eslint-config-next": "13.0.5",
     "next": "13.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.3"
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "typescript": "^4.9.3"
   }
 }
