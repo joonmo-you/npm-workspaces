@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:utils\" \"npm:dev:blog\" \"npm:dev:dashboard\"",
+    "dev:blog": "npm run --workspace=@monorepo/blog dev",
+    "dev:dashboard": "npm run --workspace=@monorepo/dashboard dev",
+    "dev:utils": "npm run --workspace=@monorepo/utils dev"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,5 +18,8 @@
   ],
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
